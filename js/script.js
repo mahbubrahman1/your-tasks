@@ -7,6 +7,7 @@ let inputBox = document.getElementById('input-box');
 // event listener
 form.addEventListener('submit', addTask);
 taskList.addEventListener('click', removeTask);
+deleteAllButton.addEventListener('click', deleteAllTasks);
 
 // add task function
 function addTask(event) {
@@ -33,4 +34,9 @@ function removeTask(event) {
         let ele = event.target.parentElement;
         ele.remove();
     }
+}
+
+// delete all funtion
+function deleteAllTasks() {
+    taskList.innerHTML = '';
 }
