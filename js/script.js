@@ -6,6 +6,7 @@ let inputBox = document.getElementById('input-box');
 
 // event listener
 form.addEventListener('submit', addTask);
+taskList.addEventListener('click', removeTask);
 
 // add task function
 function addTask(event) {
@@ -24,4 +25,12 @@ function addTask(event) {
         inputBox.value = '';
     }
     event.preventDefault();
+}
+
+// remove task function
+function removeTask(event) {
+    if (event.target.hasAttribute('href')) {
+        let ele = event.target.parentElement;
+        ele.remove();
+    }
 }
