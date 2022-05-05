@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', getTasks)
 
 // add task function
 function addTask(event) {
-    if (inputBox.value == '') {
+    if (inputBox.value === '') {
         alert('please add a task!!');
     } else {
         // create li
@@ -54,7 +54,7 @@ function deleteAllTasks() {
 // tasks store in local storage
 function storeLocalStorage(task) {
     let tasks;
-    if (localStorage.getItem('tasks') == null) {
+    if (localStorage.getItem('tasks') === null) {
         tasks = [];
     } else {
         tasks = JSON.parse(localStorage.getItem('tasks'));
